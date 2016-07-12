@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrap{
+	margin: 20px auto;
+	min-height: 468px; /*绝对定位的元素已经脱离了文档流，父元素是不会随子元素高度变化的。所以需要设置一个最小高度*/
+	background-color: #eee;
+	border: 1px solid #999;
+	/*overflow: hidden;*/
+	position: relative;
+}
+.left{
+	width: 198px;
+	border: 1px solid #999;
+	/*float: left;   浮动元素实际仍然还是独占一行，所以不适合用于实现自适应，应用绝对定位。*/
+	background-color: #fff;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.logo{
+	width: 78px;
+	height: 78px;
+	background: url(../images/1e9df34d20442e7e02257138eb77d463.jpg) no-repeat;
+	margin: 20px;
+	float: left;
+}
+.word{
+	margin-top: 20px;
+}
+.center{
+	margin-left: 240px;
+	margin-right: 160px;
+	border: 1px solid #999;
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #fff;
+}
+.right{
+	width: 118px;
+	border: 1px solid #999;
+	/*float: right; 浮动元素实际仍然还是独占一行，所以不适合用于实现自适应，应用绝对定位。*/
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: #fff;
+	
+}
+.picture{
+	width: 80px;
+	height: 80px;
+	border: 1px solid #999;
+	margin: 20px;
+	background: url("../images/1e9df34d20442e7e02257138eb77d463.jpg") no-repeat;
+}
