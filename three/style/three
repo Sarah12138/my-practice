@@ -1,0 +1,103 @@
+/* reset */
+html{color:#000;background:#fff;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body{font:12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;}
+img{border:none;}
+em,strong{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+table {border-collapse:collapse;border-spacing:0;}
+h1{font-size:18px;}
+h2{font-size:16px;}
+h3{font-size:14px;}
+h4, h5, h6{font-size:100%;}
+
+q:before,q:after{content:'';}/* 消除q前后的内容 */
+button,input,select,textarea{font-size:100%;}/* 使得表单元素在 ie 下能继承字体大小 */
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+address,cite,dfn,em,var{font-style:normal;} /* 将斜体扶正 */
+
+/* link */
+a{color:#36c;text-decoration:none;}
+a:hover{color:#f60;text-decoration:underline;}
+
+.wrap{
+	width: 980px;
+	height: 1386px;
+	margin: auto;
+}
+.main{
+	width: 892px;
+	margin: auto;
+}
+.logo{
+	width: 110px;
+	height: 61px;
+	background-color: #d45d5c;
+}
+.top hr{
+	/*清除hr在不同浏览器下的默认值*/
+	margin: 0;
+	border: 0;
+	color: #938e8c;
+	background-color: #938e8c;
+	width: 892px;
+	height: 2px;
+}
+.center{
+	margin-top: 34px;
+	position: relative;
+}
+.center_one .left{
+	width: 641px;
+	height: 301px;
+	background: url("../images/task_1_6_1.jpg") no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.center_one .left .one, .center_one .left .two{
+	width: 191px;
+	height: 301px;
+	position: absolute;
+}
+.center_one .left .one{
+	top: 0;
+	left: 0;
+	background-color: #418c59;
+	opacity: 0.5;
+}
+.center_one .left .two{
+	top: 0;
+	right: 0;
+	background-color: #d45d5c;
+	opacity: 0.5;
+}
+.center_one .right{
+	width: 203px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.center_one .right hr{
+	margin: 0;
+	border: 0;
+	color: #cc8091;
+	background-color: #cc8091;
+	width: 203px;
+	height: 2px;
+}
+.center_one .right h1, .center_one .right h2{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	color: #000; 
+}
+.center_one .right h1:first-letter, .center_one .right h2:first-letter{
+	font-size: 24px;
+}
+.center_one .right p{
+	font-size: 12px;
+	font-family: "楷体";
+	font-weight: normal;
+	color: #676767;
+}
