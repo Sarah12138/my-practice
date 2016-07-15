@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style>
+		.parent{
+			border: 1px solid #f77;
+			
+			/*第二种清除浮动的方法，虽然可以覆盖所有的浏览器，但是当子元素设置一个负的margin值或者负绝对定位时，子元素的某些超出父元素容器的内容就因为overflow:hidden而被裁减掉zoom的作用就是为了兼容IE6/7/8和检查是否清除浮动
+			overflow: hidden;  
+			zoom: 1;*/
+			zoom: 1; /*第三种方法，使用:after伪元素来清除浮动，after是指最后一个子元素的后面,这个方法是最好的，不会影响其他样式*/
+		}
+		.parent:after{
+			/*content是第三种清除浮动方法中的关键，如果不写，父元素高度依然塌陷*/
+			content: "随便写什么内容都可以"; 
+			clear: both;
+			visibility: hidden;
+			/*无论子元素是行级元素还是块级元素，加上display: block;后，父元素的高度都是子元素高度的两倍，再加上line-height或height后就和子元素高度一致了，why？*/
+			display: block; 
+			line-height: 0;
+		}
+		.child{
+			border: 1px solid #666;
+			float: right;  /*子元素浮动后父元素的高度塌陷*/
+			/*margin-right: -80px;
+			position: absolute;  
+			right: -20px; 
+			如果是相对于浏览器负绝对定位，则子元素中的内容裁减效果和负margin值后裁减一致，如果是相对于父元素负绝对定位，则子元素中的内容会被完全裁减，不显示，父元素高度塌陷*/
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+			<span class="child">我是文字，我要向右浮动，浮动，浮动，浮动...</span>
+			<!-- <div style = "clear:both;"></div>  一种最直接简单的方法，兼容性强，但只用了一次，白白浪费了一个div标签 -->
+	</div>
+	
+</body>
+</html>
