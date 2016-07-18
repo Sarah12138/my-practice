@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三栏布局（中间栏宽度自适应）的三种方法</title>
+	<style>
+		html, body{
+			margin: 0;
+			height: 100%;
+		}
+		/*第一种方法利用左右两栏固定宽度并绝对定位，中间栏采用左右margin值来撑开距离
+		缺点：当中间栏中添加了一个有宽度的容器时，当浏览器小到一定程度，中间栏有宽度的子容器就会被右边栏覆盖一些内容，发生了层重叠
+		.left, .right{
+			width: 200px;
+			height: 100%;
+			background-color: #f88;
+			position: absolute;
+			top: 0;
+		}
+		.left{
+			left: 0;
+		}
+		.right{
+			right: 0;
+		}
+		.center{
+			height: 100%;
+			background-color: #e66;
+			margin: 0 220px;
+		}*/
+
+		/*第二种方法中间栏必须使用双层标签，外层div的宽度为100%，然后左浮动；内层 div为真正的主体部分，含有220px的左右margin值。左右两栏均采用负的margin值定位的，左栏左浮动，由于前面div宽度为100%，所以-100%刚好使左栏定位到页面的左侧，右栏也采用负margin-left，值为右栏的宽度
+		.center{
+			width: 100%;
+			height: 100%;
+			float: left;
+		}
+		.main{
+			height: 100%;
+			margin: 0 220px;
+			background-color: #ccc;
+		}
+		.left, .right{
+			height: 100%;
+			width: 200px;
+			float: left;
+			background-color: #f99;
+		}
+		.left{
+			margin-left: -100%;
+		}
+		.right{
+			margin-left: -200px;
+		}*/
+		
+		/*第三种方法采用自身左右浮动实现三栏布局*/
+		.left, .right{
+			width: 200px;
+			height: 100%;
+			background-color: #ccc;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+		.center{
+			height: 100%;
+			background-color: #f99;
+			margin: 0 220px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 第一种方法三栏顺序随意
+	<div class="left">左栏</div>
+	<div class="center">中间栏</div>
+	<div class="right">右栏</div> -->
+
+	<!-- 第二种方法，必须先写中间栏的html代码，在写左右栏的才行
+	<div class="center">
+		<div class="main">中间栏</div>
+	</div>
+	<div class="left">左栏</div>
+	<div class="right">右栏</div> -->
+	
+	<!-- 第三种方法必须先写左右两栏的html代码，谁先谁后无所谓，但必须将中间栏放在左右两栏的后面 -->
+	<div class="left"></div>
+	<div class="right"></div>
+	<div class="center"></div>
+</body>
+</html>
