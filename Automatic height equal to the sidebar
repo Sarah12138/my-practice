@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css实现侧边栏/分栏高度自动相等P</title>
+	<style>
+		.main{
+			/*父元素的这个属性是必须的，否则会显示溢出的内容*/
+			overflow: hidden;
+		}
+		.left{
+			width: 200px;
+			background-color: #aaa;
+			float: left;
+			min-height: 500px;
+			/*关键代码，左栏实现与中间栏高度相等就要使用负的margin值，注意padding是正值，值可以随意，若左侧栏高度不可能超过3000px,就写3000px，若不可能超过2000px，就写2000px*/
+			margin-bottom: -3000px;
+			padding-bottom: 3000px;
+		}
+		.right{
+			width: 200px;
+			background-color: #ccc;
+			float: right;
+		}
+		.center{
+			height: 600px;
+			margin: 0 230px;
+			background-color: #f88;
+		}
+		/*除了上面这一种方法以外，还有min-height方法，利用背景图片垂直平铺的方法*/
+	</style>
+</head>
+<body>
+	<div class="main">
+	<!-- 采用自身浮动实现基本的三栏布局，中间栏宽度自适应的写法：左右两栏必须写在中间栏的前面，顺序可以随意 -->
+		<div class="left">左栏，我的高度会随着中间栏高度自动增加，并与中间栏相等</div>
+		<div class="right">右栏，我的高度不自动与中间栏相等。别问我为什么，任性！</div>
+		<div class="center">中间栏</div>
+	</div>
+</body>
+</html>
