@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>css实现侧边栏/分栏高度自动相等P</title>
 	<style>
+		body,html{
+			margin: 0;
+			padding: 0;
+		}
 		.main{
 			/*父元素的这个属性是必须的，否则会显示溢出的内容*/
 			overflow: hidden;
