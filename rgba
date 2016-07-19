@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rgba的应用与兼容的ie的半透明背景色</title>
+	<style>
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	.background{
+		/*使用一下两条规则可以解决半透明色背景的兼容性问题*/
+		background: rgba(0,0,0,0.5);  /*其他浏览器*/
+		/*IE浏览器*/
+		filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#7F000000, endColorStr=#7F000000);
+		
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		padding: 10px;
+		position: absolute;
+		top: 10px;
+	}
+	.rgba_box{
+		width: 180px;
+		height: 180px;
+		background-color: #d89;
+		margin: 20px auto;
+	}
+	</style>
+</head>
+<body>
+	<p>我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景我是背景</p>
+	<div class="background">
+		<div class="rgba_box"></div>
+	</div>
+</body>
+</html>
