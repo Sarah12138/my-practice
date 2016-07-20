@@ -78,7 +78,7 @@
 	<div class="center">中间栏</div>
 	<div class="right">右栏</div> -->
 
-	<!-- 第二种方法，必须先写中间栏的html代码，在写左右栏的才行
+	<!-- 第二种方法，必须先写中间栏的html代码，在写左右栏的前面才行
 	<div class="center">
 		<div class="main">中间栏</div>
 	</div>
