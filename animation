@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<style>
+		.one{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			animation: changecolor 5s;
+			-webkit-animation: changecolor 5s;
+			-moz-animation: changecolor 5s;
+			-o-animation: changecolor 5s;
+		}
+		@keyframes changecolor{
+			from{background-color: red;}
+			to{background-color: yellow;}
+		}
+		@-webkit-keyframes changecolor{
+			from{background-color: red;}
+			to{background-color: yellow;}
+		}
+		@-moz-keyframes changecolor{
+			from{background-color: red;}
+			to{background-color: yellow;}
+		}
+		@-o-keyframes changecolor{
+			from{background-color: red;}
+			to{background-color: yellow;}
+		}
+		.two{
+			width: 100px;
+			height: 100px;
+			background: yellow;
+			animation: changeTwo 5s;
+			-webkit-animation: changeTwo 5s;
+			-moz-animation: changeTwo 5s;
+			-o-animation: changeTwo 5s;
+		}
+		@keyframes changeTwo{
+			0%{
+				background: yellow;
+				left: 0px;
+				top: 300px;
+			}
+			25%{
+				background: red;
+				left: 200px;
+				top: 300px;
+			}
+			50%{
+				background: blue;
+				left: 200px;
+				top: 500px;
+			}
+			75%{
+				background: green;
+				left: 0;
+				top: 500px;
+			}
+			100%{
+				background: gray;
+				left: 0;
+				top: 300px;
+			}
+		}
+		@-webkit-keyframes changeTwo{
+			0%{
+				background: yellow;
+				left: 0;
+				top: 300px;
+			}
+			25%{
+				background: red;
+				left: 200px;
+				top: 300px;
+			}
+			50%{
+				background: blue;
+				left: 200px;
+				top: 500px;
+			}
+			75%{
+				background: green;
+				left: 0;
+				top: 500px;
+			}
+			100%{
+				background: gray;
+				left: 0;
+				top: 300px;
+			}
+		}
+		@-moz-keyframes changeTwo{
+			0%{
+				background: yellow;
+				left: 0;
+				top: 300px;
+			}
+			25%{
+				background: red;
+				left: 200px;
+				top: 300px;
+			}
+			50%{
+				background: blue;
+				left: 200px;
+				top: 500px;
+			}
+			75%{
+				background: green;
+				left: 0;
+				top: 500px;
+			}
+			100%{
+				background: gray;
+				left: 0;
+				top: 300px;
+			}
+		}
+		@-o-keyframes changeTwo{
+			0%{
+				background: yellow;
+				left: 0;
+				top: 300px;
+			}
+			25%{
+				background: red;
+				left: 200px;
+				top: 300px;
+			}
+			50%{
+				background: blue;
+				left: 200px;
+				top: 500px;
+			}
+			75%{
+				background: green;
+				left: 0;
+				top: 500px;
+			}
+			100%{
+				background: gray;
+				left: 0;
+				top: 300px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="one"></div>
+	<div class="two"></div>
+</body>
+</html>
